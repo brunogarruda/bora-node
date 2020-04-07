@@ -3,5 +3,5 @@ node_js:
   - 12.16.1
 
 script:
+- cd ./api-gateway
 - npm test
--
