@@ -5,3 +5,10 @@ node_js:
 script:
 - cd ./api-gateway
 - npm test
+- cd ..
+- cd ..
+# - sudo ssh -i ./bora-bragantino.pem ec2-user@34.230.3.209
+- ssh ec2-user@34.230.3.209 "mv -rf /home/new/bora-node /home/old/bora-node-old
+- exit
+- scp -vp22 ./bora-node ec2-user@34.230.3.209:/home/new/
+# - npm start
