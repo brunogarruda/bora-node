@@ -8,7 +8,11 @@ script:
 - npm test
 - cd ..
 - sudo chmod 777 ./bora-bragantino.pem
-- cd ..
+- 'which ssh-agent || ( apt-get install -qq openssh-client )'
+- eval $(ssh-agent -s)
+- ssh-add <(echo ./bora-bragantino.pem)
+- mkdir -p ~/.ssh
+
 # - scp -vp22 ./bora-node ec2-user@18.234.41.197:/home/ec2-user/new/
 # - sudo ssh -i ./bora-bragantino.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@18.234.41.197
 - sudo scp -vp22 ./bora-node UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@18.234.41.197:/home/ec2-user/new/
