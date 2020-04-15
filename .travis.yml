@@ -8,7 +8,7 @@ script:
 - npm test
 - cd ..
 - sudo chmod 777 ./bora-bragantino.pem
-- sudo ssh -i ~/Downloads/bora-bragantino.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@18.234.41.197
+- sudo ssh -i ./bora-bragantino.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@18.234.41.197
 # - ssh -i ec2-user@18.234.41.197 "mv /home/ec2-user/new/bora-node /home/ec2-user/old/bora-node-old"
 - yes | command-that-asks-for-input
 # - exit
