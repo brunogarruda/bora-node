@@ -12,6 +12,7 @@ script:
 - eval $(ssh-agent -s)
 - ssh-add <(echo ./bora-bragantino.pem)
 - mkdir -p ~/.ssh
+- echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 
 # - scp -vp22 ./bora-node ec2-user@18.234.41.197:/home/ec2-user/new/
 # - sudo ssh -i ./bora-bragantino.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@18.234.41.197
