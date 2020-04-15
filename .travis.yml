@@ -7,8 +7,9 @@ script:
 - npm install
 - npm test
 - cd ..
-- scp -vp22 ./bora-node ec2-user@18.234.41.197:/home/ec2-user/new/
 - sudo chmod 777 ./bora-bragantino.pem
+- cd ..
+- scp -vp22 ./bora-node ec2-user@18.234.41.197:/home/ec2-user/new/
 - sudo ssh -i ./bora-bragantino.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@18.234.41.197
 # - ssh -i ec2-user@18.234.41.197 "mv /home/ec2-user/new/bora-node /home/ec2-user/old/bora-node-old"
 -
