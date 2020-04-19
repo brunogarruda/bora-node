@@ -14,7 +14,6 @@ script:
 - sudo chmod 777 ./bora-node.pem
 - 'which ssh-agent || ( apt-get install -qq openssh-client )'
 - eval $(ssh-agent -s)
-- echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
 - sudo ssh -i ./bora-node.pem  ec2-user@3.233.168.122
 # - scp -vp22 ./bora-node ec2-user@18.234.41.197:/home/ec2-user/new/
 # - sudo ssh -i ./bora-bora-node.pem -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no ec2-user@18.234.41.197
