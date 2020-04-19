@@ -2,6 +2,10 @@ Language: node_js
 node_js:
   - 12.16.1
 
+notifications:
+  email:
+    - bgabriel.arruda@gmail.com
+
 script:
 - cd ./api-gateway
 - npm install
